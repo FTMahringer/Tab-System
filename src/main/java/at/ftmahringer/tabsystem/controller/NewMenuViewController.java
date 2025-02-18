@@ -27,6 +27,7 @@ public class NewMenuViewController implements Initializable {
     public ScrollPane mainPane;
     public ScrollPane tabsPane;
     public VBox bottomVbox;
+    public HBox breadCrumbHbox;
 
     private SceneManager sceneManager;
     private final TabRespository tabRepository = TabRespository.getInstance();
@@ -39,16 +40,11 @@ public class NewMenuViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         sceneManager = SceneManager.getInstance();
         sceneManager.setScrollPane(mainPane);
+        sceneManager.setBreadcrumbHBox(breadCrumbHbox);
         configureSplitPanes();
         configureTabPaneFocus();
         loadTabs();
-        initializeDefaultScene();
         System.out.println("NewMenuViewController initialized");
-    }
-
-    private void initializeDefaultScene() {
-        Scenes initialScene = Scenes.getFirstScene();
-        sceneManager.showSceneInScrollPane(initialScene);
     }
 
     private void loadTabs() {

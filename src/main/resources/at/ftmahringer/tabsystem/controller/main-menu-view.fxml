@@ -52,6 +52,11 @@
                               <FontIcon iconLiteral="ri-shut-down" iconSize="75" layoutX="11.0" layoutY="81.0" onMouseClicked="#onShutdownClicked" />
                            </children>
                         </AnchorPane>
+                        <AnchorPane prefHeight="108.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox fx:id="breadCrumbHbox" alignment="CENTER_LEFT" prefHeight="108.0" prefWidth="288.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
                      </children>
                   </AnchorPane>
                   <ScrollPane fx:id="mainPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" />

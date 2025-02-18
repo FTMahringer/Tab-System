@@ -21,7 +21,7 @@ services:
     ports:
       - "9090:80"
     environment:
-      PMA_HOST: db  # Referenz auf den db-Service
+      PMA_HOST: db
       PMA_USER: mydb
       PMA_PASSWORD: mydb
       MEMORY_LIMIT: 1G

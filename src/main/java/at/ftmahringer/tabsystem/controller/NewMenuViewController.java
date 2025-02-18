@@ -1,7 +1,8 @@
 package at.ftmahringer.tabsystem.controller;
 
+import at.ftmahringer.tabsystem.JavaFxApplication;
 import at.ftmahringer.tabsystem.model.Tab;
-import at.ftmahringer.tabsystem.repositories.TabRespository;
+import at.ftmahringer.tabsystem.repositories.TabRepository;
 import at.ftmahringer.tabsystem.utils.SceneManager;
 import at.ftmahringer.tabsystem.utils.Scenes;
 import javafx.fxml.Initializable;
@@ -15,11 +16,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import org.kordamp.ikonli.javafx.FontIcon;
+import org.springframework.stereotype.Controller;
 
 import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Controller
 public class NewMenuViewController implements Initializable {
 
     public SplitPane rootPane;
@@ -30,15 +33,18 @@ public class NewMenuViewController implements Initializable {
     public HBox breadCrumbHbox;
 
     private SceneManager sceneManager;
-    private final TabRespository tabRepository = TabRespository.getInstance();
+    private final TabRepository tabRepository;
 
+    public NewMenuViewController(TabRepository tabRepository) {
+        this.tabRepository = tabRepository;
+    }
 
     private HBox selectedTab = null;
     private final Map<HBox, Rectangle> tabIndicators = new HashMap<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        sceneManager = SceneManager.getInstance();
+        sceneManager = JavaFxApplication.getSceneManager();
         sceneManager.setScrollPane(mainPane);
         sceneManager.setBreadcrumbHBox(breadCrumbHbox);
         configureSplitPanes();

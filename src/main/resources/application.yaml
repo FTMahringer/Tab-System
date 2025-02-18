@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Tab-System
+
+  datasource:
+    url: jdbc:mysql://localhost:4306/mydb
+    username: mydb
+    password: mydb
+
+  jpa:
+    hibernate:
+      ddl-auto: update # data definition language
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        enable_lazy_load_no_trans: true

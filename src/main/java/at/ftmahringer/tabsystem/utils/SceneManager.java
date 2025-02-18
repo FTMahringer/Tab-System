@@ -28,6 +28,7 @@ public class SceneManager {
     private final Map<Scenes, Object> activeControllers = new HashMap<>();
 
     private ScrollPane scrollPane;
+    private HBox breadcrumbHBox;
 
     private static SceneManager instance;
 
@@ -87,6 +88,7 @@ public class SceneManager {
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(false);
         scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        updateBreadcrumbs();
     }
 
     public void showSceneInScrollPane(Scenes fxml, Scenes rootScene) {
@@ -198,5 +200,62 @@ public class SceneManager {
 
     public Object getControllerForScene(Scenes targetScene) {
         return activeControllers.get(targetScene);
+    }
+
+    public void resetBreadcrumbs(Scenes rootScene) {
+        scrollPaneSceneStack.clear();
+        scrollPaneSceneStack.push(rootScene);
+    }
+
+    private void updateBreadcrumbs() {
+        breadcrumbHBox.getChildren().clear();
+        List<Scenes> breadcrumbs = new ArrayList<>(scrollPaneSceneStack);
+        Collections.reverse(breadcrumbs);
+        for (Scenes breadcrumb : breadcrumbs) {
+            if (GlobalEnumVariables.DEBUG_MODE.getValue()) {
+                System.out.println("Breadcrumb: " + breadcrumb + " at index: " + breadcrumbs.indexOf(breadcrumb));
+            }
+            addBreadcrumb(breadcrumb, breadcrumbs.indexOf(breadcrumb));
+        }
+    }
+
+    private void navigateToBreadcrumb(int index) {
+        GlobalEnumVariables debugMode = GlobalEnumVariables.DEBUG_MODE;
+        if (debugMode.getValue()) {
+            System.out.println("Navigating to breadcrumb: " + index + " with size: " + scrollPaneSceneStack.size());
+        }
+        if (index < 0 || index >= scrollPaneSceneStack.size()) {
+            if (debugMode.getValue()) {
+                System.out.println("Invalid breadcrumb index: " + index);
+            }
+            return;
+        }
+        if (index == scrollPaneSceneStack.size() - 1) {
+            if (debugMode.getValue()) {
+                System.out.println("Already at breadcrumb index: " + index);
+            }
+            return;
+        }
+        while (scrollPaneSceneStack.size() > index + 1) {
+            scrollPaneSceneStack.pop();
+        }
+        showSceneInScrollPane(scrollPaneSceneStack.peek());
+    }
+
+    public void addBreadcrumb(Scenes childScene, int index) {
+        Button button = new Button(childScene.getTitle());
+        button.setStyle("-fx-background-color: transparent;" +
+                "-fx-border-color: transparent;" +
+                "-fx-text-fill: #007BFF;" +
+                "-fx-font-weight: bold;" +
+                "-fx-cursor: hand;" +
+                "-fx-font-size: 14px;" +
+                "-fx-font-family: 'Arial', sans-serif;" +
+                "-fx-text-alignment: center;");
+        button.setOnAction(_ -> navigateToBreadcrumb(index));
+        if (index > 0) {
+            breadcrumbHBox.getChildren().add(new Label(" / "));
+        }
+        breadcrumbHBox.getChildren().add(button);
     }
 }

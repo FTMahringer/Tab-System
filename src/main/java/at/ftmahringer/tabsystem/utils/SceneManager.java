@@ -1,11 +1,13 @@
 package at.ftmahringer.tabsystem.utils;
 
 import at.ftmahringer.tabsystem.Starter;
-import at.ftmahringer.tabsystem.utils.Scenes;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -13,10 +15,7 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class SceneManager {
 
@@ -76,6 +75,10 @@ public class SceneManager {
 
     public void setScrollPane(ScrollPane scrollPane) {
         this.scrollPane = scrollPane;
+    }
+
+    public void setBreadcrumbHBox(HBox breadcrumbHBox) {
+        this.breadcrumbHBox = breadcrumbHBox;
     }
 
     public void showSceneInScrollPane(Scenes fxml) {

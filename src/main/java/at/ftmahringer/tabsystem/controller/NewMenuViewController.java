@@ -171,6 +171,7 @@ public class NewMenuViewController implements Initializable {
 
     private void switchToTabScene(Tab tab) {
         Scenes newScene = Scenes.fromString(tab.getName());
+        sceneManager.resetBreadcrumbs(newScene);
         sceneManager.showSceneInScrollPane(newScene);
     }
 

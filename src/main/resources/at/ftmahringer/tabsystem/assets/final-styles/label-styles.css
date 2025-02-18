@@ -1,0 +1,52 @@
+.label-title{
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.label-subtitle{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.label-description{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.red-label{
+    -fx-text-fill: #d32f2f;
+}
+
+.green-label{
+    -fx-text-fill: #4caf50;
+}
+
+.blue-label{
+    -fx-text-fill: #2196f3;
+}
+
+.orange-label{
+    -fx-text-fill: #ff9800;
+}
+
+.purple-label{
+    -fx-text-fill: #9c27b0;
+}
+
+.pink-label{
+    -fx-text-fill: #e91e63;
+}
+
+.gray-label{
+    -fx-text-fill: #9e9e9e;
+}
+.yellow-label{
+    -fx-text-fill: #ffeb3b;
+}
+
+.maroon-label{
+    -fx-text-fill: #880e4f;
+}

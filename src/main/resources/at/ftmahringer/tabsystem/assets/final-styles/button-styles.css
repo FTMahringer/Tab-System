@@ -1,0 +1,80 @@
+/* Blue Buttons */
+.blue-button {
+    -fx-background-color: #008CBA;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.blue-button:hover {
+    -fx-background-color: #0077A3;
+}
+
+/* Green Buttons */
+.green-button {
+    -fx-background-color: #4CAF50;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.green-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Maroon Buttons */
+.maroon-button {
+    -fx-background-color: #800000;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.maroon-button:hover {
+    -fx-background-color: #660000;
+}
+
+/* Orange Buttons */
+.orange-button {
+    -fx-background-color: #ff9800;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.orange-button:hover {
+    -fx-background-color: #e68a00;
+}
+
+/* Red Buttons */
+.red-button {
+    -fx-background-color: #f44336;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+    .red-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+
+/* Yellow Buttons */
+.yellow-button {
+    -fx-background-color: #ffeb3b;
+    -fx-border-color: #000000;
+    -fx-text-fill: #000000;
+}
+.yellow-button:hover {
+    -fx-background-color: #fdd835;
+}
+
+/* Purple Buttons */
+.purple-button {
+    -fx-background-color: #800080;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.purple-button:hover {
+    -fx-background-color: #7d007d;
+}
+
+/* Gray Buttons */
+.gray-button {
+    -fx-background-color: #808080;
+    -fx-border-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.gray-button:hover {
+    -fx-background-color: #737373;
+}

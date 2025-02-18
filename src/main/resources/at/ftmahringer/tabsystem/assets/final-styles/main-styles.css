@@ -1,0 +1,191 @@
+/* Main styles shared between themes */
+.root {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+.vbox {
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-spacing: 5px;
+}
+
+.hbox.tab {
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.1, 0, 1);
+    -fx-cursor: hand;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-transition: background-color 0.3s ease;
+}
+
+.hbox.tab:hover {
+    -fx-background-color: #e8f5e9;
+}
+
+.rectangle {
+    -fx-arc-width: 5;
+    -fx-arc-height: 5;
+    -fx-fill: #4caf50;
+    -fx-transition: fill 0.3s ease;
+}
+
+.hbox.tab .font-icon {
+    -fx-icon-size: 24px;
+}
+
+.hbox.tab .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-transition: text-fill 0.3s ease;
+}
+
+.hbox.tab.selected {
+    -fx-background-color: #e8f5e9;
+}
+
+.separator {
+    -fx-padding: 5px 0;
+}
+
+.task-listview{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.font-icon {
+    -fx-transition: icon-color 0.3s ease;
+}
+
+.scroll-pane#mainPane {
+    -fx-padding: 20px;
+}
+
+.radio-button {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.table-view {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-cell-size: 40;
+}
+
+.separator {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10;
+    -fx-font-weight: bold;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-style: solid;
+}
+
+
+/* TabPane */
+.tab{
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-font-weight: bold;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-font-size: 14;
+    -fx-text-fill: #333;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:vertical .increment-button:hover, .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:horizontal .increment-button:hover, .scroll-bar:horizontal .decrement-button:hover {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:vertical .increment-arrow, .scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:horizontal .increment-arrow, .scroll-bar:horizontal .decrement-arrow {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:vertical .increment-arrow:hover, .scroll-bar:vertical .decrement-arrow:hover {
+    -fx-background-color: #4caf50;
+}
+
+.scroll-bar:horizontal .increment-arrow:hover, .scroll-bar:horizontal .decrement-arrow:hover {
+    -fx-background-color: #4caf50;
+}
+
+.small-button {
+    -fx-font-size: 14px !important;
+    -fx-font-weight: bold !important;
+    -fx-border-radius: 5px !important;
+    -fx-background-radius: 5px !important;
+    -fx-padding: 5px 10px !important;
+}
+
+.middle-button {
+    -fx-font-size: 16px !important;
+    -fx-font-weight: bold !important;
+    -fx-border-radius: 5px !important;
+    -fx-background-radius: 5px !important;
+    -fx-padding: 10px 20px !important;
+}
+
+.large-button {
+    -fx-font-size: 18px !important;
+    -fx-font-weight: bold !important;
+    -fx-border-radius: 5px !important;
+    -fx-background-radius: 5px !important;
+    -fx-padding: 15px 30px !important;
+}

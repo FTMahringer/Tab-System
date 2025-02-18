@@ -1,0 +1,133 @@
+.ikonli-icon {
+    -fx-font-size: 25;
+}
+
+.logo-icon{
+    -fx-font-size: 50;
+}
+
+.selected-tab-pane {
+    -fx-background-color: #4CAF50;
+}
+
+.selected-tab {
+    -fx-text-fill: #4CAF50;
+}
+
+
+/* Logo Tab */
+.logo-tab {
+    -fx-background-color: #2A2A2E; /* Dark background for the logo tab */
+    -fx-padding: 20; /* Padding around the logo */
+    -fx-alignment: center-left; /* Align content to the left */
+    -fx-font-weight: bold; /* Bold text for the logo tab */
+    -fx-text-fill: #FFFFFF; /* White text */
+}
+
+.logo-tab-text {
+    -fx-padding: 0 0 0 10; /* Padding for text */
+    -fx-font-size: 25; /* Regular font size */
+    -fx-text-fill: #FFFFFF; /* White text */
+}
+
+/* Separator (Tasks and Pomodoro headers) */
+.tab-seperator {
+    -fx-background-color: #1E1E20; /* Slightly darker background */
+    -fx-padding: 10; /* Padding for the separator area */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-border-color: #444444; /* Border color for separation */
+    -fx-border-width: 0 0 1 0; /* Border only on the bottom */
+    -fx-border-style: solid; /* Solid border */
+}
+
+.tab-seperator-text {
+    -fx-padding: 0 0 0 10; /* Padding for text */
+    -fx-font-size: 18; /* Regular font size */
+    -fx-text-fill: #535359; /* Dark gray text */
+}
+
+/* Tabs (Daily, Backlog, Categories, etc.) */
+.tab {
+    -fx-background-color: #323237; /* Slightly lighter gray background */
+    -fx-padding: 10 15; /* Padding for the tabs */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #DDDDDD; /* Light gray text */
+    -fx-alignment: center-left; /* Align text to the left */
+}
+
+.tab-text {
+    -fx-padding: 0 0 0 10; /* Padding for text */
+    -fx-font-size: 18; /* Regular font size */
+    -fx-text-fill: #AAAB; /* Dark gray text */
+
+}
+
+.tab:hover {
+    -fx-background-color: #3E3E43; /* Lighter gray when hovered */
+}
+
+.tab:selected {
+    -fx-background-color: #4CAF50; /* Green for selected tabs */
+    -fx-text-fill: #FFFFFF; /* White text on selected tab */
+    -fx-font-weight: bold; /* Bold text for selected tab */
+}
+
+/* Icon Styling (if you have icons with tabs) */
+.tab .icon {
+    -fx-padding: 0 10 0 0; /* Padding for space between icon and text */
+    -fx-text-fill: #CCCCCC; /* Light gray for icons */
+}
+
+.tab:hover .icon {
+    -fx-text-fill: #FFFFFF; /* White icons on hover */
+}
+
+/* Settings and History (similar to tabs but can have unique styles) */
+.settings-tab,
+.history-tab {
+    -fx-background-color: #323237; /* Matches regular tabs */
+    -fx-padding: 10 15;
+    -fx-font-size: 13;
+    -fx-text-fill: #DDDDDD;
+}
+
+.settings-tab:hover,
+.history-tab:hover {
+    -fx-background-color: #3E3E43; /* Same hover effect as tabs */
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: #2A2A2E; /* Dark background for vertical scroll bar */
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: #2A2A2E; /* Dark background for scroll buttons */
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4CAF50; /* Green thumb for vertical scroll bar */
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #4CAF50; /* Green thumb on hover */
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: #2A2A2E; /* Dark background for horizontal scroll bar */
+}
+
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: #2A2A2E; /* Dark background for scroll buttons */
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #4CAF50; /* Green thumb for horizontal scroll bar */
+}
+
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #4CAF50; /* Green thumb on hover */
+}
+
+
